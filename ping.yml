@@ -1,0 +1,20 @@
+---
+- name: Proof of Concept Playbook
+  hosts: all
+  gather_facts: yes
+  tasks:
+    - name: Check Disk Space
+      command: df -h /
+      register: disk_space
+
+    - name: Display Disk Space
+      debug:
+        msg: "{{ disk_space.stdout_lines }}"
+
+    - name: Check Date and Time
+      command: date
+      register: current_time
+
+    - name: Display Date and Time
+      debug:
+        msg: "{{ current_time.stdout }}"
