@@ -1,5 +1,5 @@
 - hosts: targets
   become: yes
   tasks:
-     - name: ping test
-       ping:
+    - name: ping test
+      ping:
