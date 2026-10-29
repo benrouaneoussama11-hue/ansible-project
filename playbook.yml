@@ -1,4 +1,4 @@
-- hosts: targets
+- hosts: target_servers
   become: yes
   tasks:
     - name: ping test
